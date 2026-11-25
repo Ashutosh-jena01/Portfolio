@@ -13,6 +13,9 @@ __pycache__/
 node_modules/
 dist/
 
+# Satoshi is self-hosted locally under the ITF Free Font License; obtain it directly from Fontshare.
+frontend/src/assets/fonts/Satoshi-Variable.woff2
+
 # IDE and logs
 .vscode/
 *.log

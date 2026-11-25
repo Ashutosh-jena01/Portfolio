@@ -30,6 +30,16 @@ notepad .env
 
 Set the placeholder values in `.env` for the local PostgreSQL instance. Keep `.env` private.
 
+## Satoshi font setup
+
+Satoshi is excluded from this public repository because its ITF Free Font License permits self-hosting on the owner’s website but restricts redistribution through public repositories. Fresh clones must obtain the official Satoshi package directly from [Fontshare](https://www.fontshare.com/fonts/satoshi), then place the official variable WOFF2 file at:
+
+```text
+D:\Portfolio\frontend\src\assets\fonts\Satoshi-Variable.woff2
+```
+
+Keep `frontend/src/assets/fonts/SATOSHI-FFL.txt` with the local file. Do not use an external runtime font request. The frontend build expects this local file to be present.
+
 ## Start the backend
 
 ```powershell
