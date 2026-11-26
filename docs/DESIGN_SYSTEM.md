@@ -22,7 +22,7 @@ The temporary preview demonstrates typography, palette, spacing, borders, respon
 
 ## Application layout
 
-The global shell uses a semantic main landmark, skip-to-content link, responsive `design-container`, reusable section spacing and stable section identifiers. The current structural order is `home`, `about`, `skills`, `projects`, `experience`, `contact`. The active application includes the floating responsive navigation, CSS cinematic space environment, hero composition and structural placeholder sections. The planet visual remains deferred and is not rendered.
+The global shell uses a semantic main landmark, skip-to-content link, responsive `design-container`, reusable section spacing and stable section identifiers. The active structural order is `home`, `about`, `skills`, `education`, `certifications`, `projects`, `experience`, `contact`; Education and Credentials remain visible during local development even when their data arrays are empty. The active application includes the floating responsive navigation, CSS cinematic space environment, hero composition and structural placeholder sections. The planet visual remains deferred and is not rendered.
 
 The floating navigation uses the existing Graphite/Obsidian surfaces, subtle borders, restrained backdrop blur and Cosmic Blue for the “Let’s Talk” action. It collapses to an accessible disclosure menu at the medium breakpoint without adding glassmorphism or unrelated visual effects.
 
@@ -39,6 +39,14 @@ The Phase 3.2 headline uses a deliberate two-line desktop composition (`Beyond` 
 Phase 3.4–3.6 add coordinated CSS entrance animation, fine-pointer parallax, a restrained hero scroll transition and reusable IntersectionObserver scroll reveals. These effects use existing motion tokens, CSS opacity/transforms and reduced-motion alternatives; hero text and controls remain stationary during decorative movement. Scroll reveals support base delays and indexed sequential child staggering.
 
 Phase 3.8.2 refines the existing space environment with denser irregular stars, restrained luminous halos, asynchronous limited twinkle and richer right-weighted Cosmic Blue atmospheric depth. Obsidian remains dominant behind the hero copy, and the approved typography, layout and palette are unchanged.
+
+## Phase 4.1 About section
+
+The About section introduces a restrained editorial two-column profile layout: verified identity and designation content on the left, and a neutral CSS portrait placeholder on the right until an approved personal photograph is provided. The section uses the existing `Section` and `ScrollReveal` primitives, preserves the `about` anchor, and conditionally presents a résumé action only when a verified public PDF is available. Current copy remains first-person and intentionally limited to confirmed information.
+
+Phase 4.2 adds a `02 / Professional Snapshot` row beneath About. Cards use Graphite/Obsidian surfaces, subtle borders, Cosmic Blue line icons and restrained hover movement. Unsupported experience, academic and cloud/DevOps details remain explicitly pending rather than being presented as claims.
+
+Phase 4.3 adds a `03 / Technical Universe` category foundation beneath the professional snapshot. Phase 4.4 replaces the static grid with a restrained hybrid constellation explorer: an SVG network, a selected-category detail panel and six compact icon button cards. Small luminous nodes, static star depth and radial atmospheric layers provide visual richness without filters, loops or 3D rendering. The cards remain the accessible alternative to the visualization; technology tags appear only when verified records are added.
 
 Phase 3.7 responsive auditing preserves this composition across the 320px–2560px range, keeps the hero CTA stack fluid on narrow screens, and gives floating navigation controls a minimum 44px touch target without changing their visual language.
 
@@ -59,4 +67,14 @@ UI primitives use semantic native elements, existing typography/color tokens, mo
 ## Planned visual language
 
 Cinematic space hero, oversized animated professional typography, floating navigation, professional about section, interactive planetary skill visualization, mission-based project archives, constellation-inspired experience timeline, certifications, interactive lunar landscape footer, astronaut/rover/satellite/rocket interactions, rocket return-to-top interaction and NOVA AI assistant. These are future requirements and are not implemented in Phase 1.
+
+## Phase 4.5 academic journey
+
+The `04 / ACADEMIC JOURNEY` Education section sits between Skills and Projects. Its vertical timeline uses existing editorial borders, Cosmic Blue nodes and restrained spacing; the public entry list remains empty until the proposed academic records are verified.
+
+The `05 / PROFESSIONAL CREDENTIALS` section follows Education and uses restrained horizontal credential cards with inline category icons, Graphite surfaces and conditional actions. No provisional credential records or non-functional buttons are displayed.
+
+## Phase 4.7 integration
+
+Implemented sections retain their distinct visual roles and numbering through `07 / FLIGHT PATH`, with `08` reserved for Contact. Empty data-driven sections do not reserve unnecessary vertical space in the public page.
 
