@@ -12,6 +12,10 @@ export function useActiveSection(sectionIds: readonly string[]) {
 
     const observer = new IntersectionObserver(
       (entries) => {
+        if (window.scrollY <= 2) {
+          setActiveSection(sectionIds[0] ?? '')
+          return
+        }
         const visible = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
@@ -24,7 +28,9 @@ export function useActiveSection(sectionIds: readonly string[]) {
     sections.forEach((section) => observer.observe(section))
 
     const handleScrollEnd = () => {
-      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      if (window.scrollY <= 2) {
+        setActiveSection(sectionIds[0] ?? '')
+      } else if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
         setActiveSection(sectionIds[sectionIds.length - 1] ?? '')
       }
     }
