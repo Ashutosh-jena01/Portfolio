@@ -20,3 +20,31 @@
 - Provide reduced-motion alternatives for cinematic effects.
 - Avoid layout shifts, continuous background processing and unnecessary `will-change` usage.
 
+## Phase 3.1 environment
+
+The space environment uses deterministic CSS star placement across distant, mid and foreground layers. Phase 3.5 adds restrained pointer parallax through CSS custom properties and a requestAnimationFrame interpolation: distant, mid and foreground layers use progressively stronger 2px, 5px and 9px maximum offsets, while the atmospheric glow uses a smaller offset. The controller has no React state updates per pointer event, suspends offscreen and hidden-tab processing, cleans up listeners/frames, disables itself on touch-only pointers and resets for reduced motion.
+
+Phase 3.3 planet rendering is currently deferred and unmounted. The preserved implementation remains available for later approval, including demand rendering, capped pixel ratio and a static fallback. Phase 3.4 uses only lightweight CSS entrance animation; no Three.js or WebGL work runs in the active app.
+
+## Phase 3.4 entrance sequence
+
+The active entrance sequence uses coordinated CSS opacity and small translate transitions for the floating navigation, identity/designation, headline, tagline, CTA row and atmospheric background. Delays are staggered to establish hierarchy without layout shifts. `prefers-reduced-motion` makes all entrance content immediately visible and disables the animations.
+
+## Phase 3.5 pointer interaction
+
+Parallax is applied only to decorative background layers, so hero text, navigation and CTAs remain stationary and readable. The existing entrance animation remains on its own elements and does not share transforms with the parallax layers. Browser visual verification remains required where browser tooling is unavailable.
+
+## Phase 3.6 scroll transitions and reveals
+
+The hero background receives a restrained scroll-out treatment through CSS custom properties: decorative layers move upward by at most 16px and fade by less than half before the About section, while the existing horizon fade remains intact. `useHeroScrollTransition` schedules passive-scroll work only while the hero is intersecting and the document is visible; it has no continuous loop and leaves hero content stationary.
+
+`ScrollReveal` uses `IntersectionObserver` with one-time reveal behavior by default. It supports token-based delay and direct-child staggering, and applies only opacity and small upward transforms. Content remains visible if the observer is unavailable or reduced motion is enabled; runtime reduced-motion changes reveal any pending content immediately.
+
+## Phase 3.7 responsive and performance audit
+
+The audit confirmed no new animation loop, dependency, runtime asset request or layout-shifting reveal was required. Hero parallax and scroll transition work are both observer-gated; scroll listeners are now attached only while the hero is intersecting. Navigation and active-section observers retain cleanup, and the existing entrance/parallax/scroll effects remain on separate decorative or content layers.
+
+## Phase 3.8.2 space environment refinement
+
+The existing three CSS star layers now use denser, irregular gradient fields with varied subpixel-to-3px star sizes and brightness. A small set of foreground accents twinkles asynchronously with CSS-only animations; the hero scroll-transition observer controls their play state, and reduced motion disables them. Additional right-weighted Cosmic Blue dust and nebula layers deepen the atmosphere without introducing external assets, neon colors or a continuous JavaScript loop.
+

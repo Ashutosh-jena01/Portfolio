@@ -13,6 +13,7 @@ D:\Portfolio
 │       │   ├── layout/        AppShell, Container and Section
 │       │   ├── navigation/    Responsive floating Navbar
 │       │   ├── pages/         PortfolioPage composition
+│       │   ├── space/         Background layers and lazy procedural planet scene
 │       │   └── sections/      Hero and structural portfolio sections
 │       ├── config/site.ts     Central site identity and section configuration
 │       ├── hooks/useActiveSection.ts
@@ -47,7 +48,17 @@ The development-only design preview is selected with `/?preview=design-system` w
 
 ## Responsive and motion foundations
 
-The layout uses mobile-first fluid widths, `clamp()` spacing, `100svh` fallback-friendly viewport sizing, safe-area-aware navigation offsets and a medium breakpoint for navigation disclosure. Motion tokens and easing values live in the global CSS; `useReducedMotion` subscribes to `prefers-reduced-motion` changes for future interactive work. No continuous loops, global animation listeners or 3D runtime were added.
+The layout uses mobile-first fluid widths, `clamp()` spacing, `100svh` fallback-friendly viewport sizing, safe-area-aware navigation offsets and a medium breakpoint for navigation disclosure. Motion tokens and easing values live in the global CSS; `useReducedMotion` subscribes to `prefers-reduced-motion` changes. `useHeroParallax` updates decorative CSS custom properties through a short requestAnimationFrame interpolation only while the hero is visible, the tab is active, motion is allowed and a fine pointer is available. `useHeroScrollTransition` uses the same gated pattern for passive scroll updates. No React state updates occur per pointer or scroll event.
+
+## Space environment foundation
+
+`SpaceEnvironment` is rendered independently from hero content and composes `AtmosphericGlow`, `Starfield`, a procedural cloud texture and a horizon fade. The background uses deterministic CSS radial/linear gradients with explicit irregular star positions, existing color tokens, `pointer-events: none`, `aria-hidden` and a local stacking context. Hero-scoped parallax moves the three star layers at 2px, 5px and 9px maximum offsets, with a smaller atmospheric offset; all values return to zero on pointer exit, reduced-motion changes, hidden tabs or offscreen state. Scroll transition variables add a small upward movement and restrained opacity reduction as the hero leaves the viewport, while preserving the existing horizon fade. The Phase 3.3 `PlanetScene` implementation and assets remain preserved but are currently unmounted while the final hero visual is deferred; the active production graph contains no Three.js initialization or planet texture chunk.
+
+`ScrollReveal` and `useScrollReveal` provide one-time IntersectionObserver reveals with tokenized opacity/translate timing, optional delay and direct-child staggering. They are applied to the existing placeholder section layout as a representative integration and can be reused by future About, Skills, Projects, Experience and Contact content without changing section structure.
+
+Phase 3.7 keeps the layout mobile-first from 320px through wide desktop widths. The floating navigation controls and links use 44px minimum touch targets, while the page shell and hero provide local clipping for intentional decorative movement rather than relying on global overflow hiding. Scroll-transition listeners are attached only while the hero intersects the viewport.
+
+Phase 3.8.2 retains the three-layer CSS starfield and adds denser deterministic gradient fields, six limited twinkle accents and a right-weighted procedural dust layer. Twinkle playback is controlled through the existing hero visibility/reduced-motion lifecycle; no new dependency, WebGL path or external runtime asset is introduced. `useActiveSection` explicitly restores the Home state at the top scroll position before evaluating intersection entries.
 
 ## Configuration and migrations
 
