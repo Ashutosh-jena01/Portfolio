@@ -2,7 +2,14 @@
 
 Professional, cinematic portfolio application for Ashutosh Jena, AI/ML Engineer.
 
-The project is developed and validated locally before any future deployment decision. The current implementation is Phase 1: a React/Vite frontend, FastAPI backend, PostgreSQL connectivity, SQLAlchemy, Psycopg 3 and Alembic.
+The project is developed and validated locally before any future deployment decision. Phase 1 foundation work and Phase 2 design-system/application-shell work are complete. Phase 3 currently includes the cinematic hero, CSS space environment, entrance animation, pointer parallax, scroll transitions and reusable scroll reveals. The Phase 3.3 planet visual remains explicitly deferred while the final hero visual is decided; browser acceptance testing is still outstanding.
+
+## Current architecture
+
+- `frontend/`: React 19, TypeScript, Vite and Tailwind CSS v4. The active portfolio renders the floating navigation, responsive hero, deterministic CSS space environment, local fonts and structural placeholder sections.
+- `backend/`: FastAPI, SQLAlchemy, Psycopg 3 and Alembic, with local PostgreSQL health checks proxied through Vite.
+- `frontend/src/components/space/PlanetScene.tsx` and related planet assets are preserved for a future approved phase but are not imported or mounted by the active application. Three.js dependencies remain installed but are absent from the active production bundle.
+- Automated lint/build validation has passed through Phase 3.8.1 remediation. Browser rendering, responsive behavior, accessibility interaction, network requests and Lighthouse measurements require manual verification.
 
 ## Requirements
 
