@@ -6,10 +6,10 @@ The project is developed and validated locally before any future deployment deci
 
 ## Current architecture
 
-- `frontend/`: React 19, TypeScript, Vite and Tailwind CSS v4. The active portfolio renders the floating navigation, responsive hero, deterministic CSS space environment, local fonts and structural placeholder sections.
+- `frontend/`: React 19, TypeScript, Vite and Tailwind CSS v4. The active portfolio renders the floating navigation, cinematic Hero, About Me, Professional Snapshot, Technical Constellation Explorer, Academic Journey and Professional Credentials sections. Education and Credentials remain visible during local development even when their typed data arrays are empty. Mission Archives, Flight Path and Let's Connect remain structural placeholder sections.
 - `backend/`: FastAPI, SQLAlchemy, Psycopg 3 and Alembic, with local PostgreSQL health checks proxied through Vite.
 - `frontend/src/components/space/PlanetScene.tsx` and related planet assets are preserved for a future approved phase but are not imported or mounted by the active application. Three.js dependencies remain installed but are absent from the active production bundle.
-- Automated lint/build validation has passed through Phase 3.8.1 remediation. Browser rendering, responsive behavior, accessibility interaction, network requests and Lighthouse measurements require manual verification.
+- Phase 4.1 through Phase 4.8.2 implementation and automated validation are complete. Browser rendering, responsive behavior, accessibility interaction, network requests, performance profiling and Lighthouse measurements require manual verification.
 
 ## Requirements
 

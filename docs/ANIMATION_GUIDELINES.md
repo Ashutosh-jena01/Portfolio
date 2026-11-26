@@ -48,3 +48,21 @@ The audit confirmed no new animation loop, dependency, runtime asset request or 
 
 The existing three CSS star layers now use denser, irregular gradient fields with varied subpixel-to-3px star sizes and brightness. A small set of foreground accents twinkles asynchronously with CSS-only animations; the hero scroll-transition observer controls their play state, and reduced motion disables them. Additional right-weighted Cosmic Blue dust and nebula layers deepen the atmosphere without introducing external assets, neon colors or a continuous JavaScript loop.
 
+## Phase 4.2 profile highlights and scroll performance
+
+The active-section hook now uses IntersectionObserver-maintained ratios for normal navigation updates, retaining only passive top-of-document and bottom-of-document checks. Professional highlight cards reuse `ScrollReveal` with sequential delays and restrained hover transitions; they add no scroll listeners or continuous animation.
+
+## Phase 4.3 technical skills
+
+`SkillsSection` uses the existing `ScrollReveal` observer for the constellation and synchronized category controls with sequential delays. Node, connection, card and detail-panel transitions use short opacity/color/border changes only. There are no skill-level scroll listeners, parallax effects, percentage animations, orbital rotation or continuous loops.
+
+## Phase 4.5 academic journey
+
+`EducationSection` reuses `ScrollReveal` for one-time sequential timeline-entry reveals. Timeline geometry is reserved by normal document flow; no scroll listener, requestAnimationFrame loop or continuous effect is introduced. Reduced motion continues to make all content immediately visible through the shared reveal utility.
+
+`CertificationsSection` reuses the same one-time `ScrollReveal` pattern for credential cards. Card hover and focus changes use restrained border, background and color transitions only; no scroll listeners, loops or expensive visual effects are added.
+
+## Phase 4.7 integration audit
+
+Source-level review found the existing hero parallax, hero scroll transition, active-section observer and scroll reveals use cleanup and gating appropriate to their scopes. Approved atmospheric blur and navigation backdrop effects remain unchanged; no browser profiling measurements are available in this environment.
+

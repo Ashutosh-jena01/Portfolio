@@ -110,3 +110,59 @@
 - Added restrained asynchronous twinkle accents and richer right-weighted atmospheric dust/nebula depth.
 - Corrected the Home active-section state at the top of the document.
 
+## Unreleased — Phase 4.1
+
+- Replaced the About placeholder with a dedicated responsive editorial About section.
+- Added typed professional profile data using only confirmed information.
+- Added a neutral CSS portrait placeholder and reserved résumé messaging without introducing unverified assets or claims.
+
+## Unreleased — Phase 4.1 visual refinement
+
+- Hardened portrait reveal visibility and added subtle About-section atmospheric depth.
+- Updated About copy to concise first-person wording and made résumé download conditional on an approved asset.
+- Corrected active-section reconciliation for the Home-to-About transition.
+
+## Unreleased — Phase 4.2
+
+- Reduced normal active-section scroll work by relying on maintained IntersectionObserver ratios.
+- Added typed Professional Profile Highlights beneath About with responsive editorial cards and sequential reveals.
+- Kept unsupported professional categories explicitly pending verified source material.
+
+## Unreleased — Phase 4.3
+
+- Added reusable typed technical skill/category data architecture.
+- Replaced the Skills placeholder with a responsive static category grid for the future orbital visualization.
+- Kept all technology entries unpublished until verified professional source material is available.
+
+## Unreleased — Phase 4.4
+
+- Replaced the static Skills category grid with an accessible SVG technical constellation explorer.
+- Added synchronized category nodes/cards, dynamic detail panel and previous/next controls.
+- Preserved claim-safe empty technology data and avoided new scroll or animation loops.
+
+## Unreleased — Phase 4.4 Constellation Visual Refinement
+
+- Refined the technical constellation with smaller luminous nodes, static star depth, atmospheric radial layers and selected-node accents.
+- Added existing category icons to the compact selectable cards without changing their interaction model.
+
+## Unreleased — Phase 4.5
+
+- Added the reusable Academic Journey section and typed education data model.
+- Kept provisional academic records unpublished until verified source information is available.
+
+## Unreleased — Phase 4.6
+
+- Added the reusable Professional Credentials section and typed certification data model.
+- Kept provisional credential records unpublished and certificate actions conditional on verified assets or URLs.
+
+## Unreleased — Phase 4.7
+
+- Integrated section numbering through Contact and preserved the reusable Education/Credentials sections for local development even when their data lists are empty.
+- Audited existing motion and navigation code without introducing new loops, dependencies or visual redesigns.
+
+## Unreleased — Phase 4.8.1–4.8.2
+
+- Completed the final read-only Phase 4 code, security, licensing, accessibility and production-output audit.
+- Reconciled README and project progress documentation with the implemented Phase 4 architecture and current deferred items.
+- Kept duplicated inline SVG icon definitions as a documented low-priority maintainability item; no application code was changed.
+
